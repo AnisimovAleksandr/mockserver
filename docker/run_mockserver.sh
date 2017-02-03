@@ -120,4 +120,4 @@ then
     MOCKSERVER_HOME="/opt/mockserver"
 fi
 
-runCommand "java -Dfile.encoding=UTF-8 -Dmockserver.logLevel=$LOG_LEVEL -jar $MOCKSERVER_HOME/mockserver-netty-jar-with-dependencies.jar$COMMAND_LINE_OPTS"
+runCommand "java -Xms256m -Xmx4096m -Dfile.encoding=UTF-8 -Dmockserver.logLevel=$LOG_LEVEL -jar $MOCKSERVER_HOME/mockserver-netty-jar-with-dependencies.jar$COMMAND_LINE_OPTS"
